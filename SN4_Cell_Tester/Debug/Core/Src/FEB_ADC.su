@@ -1,0 +1,7 @@
+../Core/Src/FEB_ADC.c:23:6:FEB_ADC_PollADC	8	static
+../Core/Src/FEB_ADC.c:65:6:FEB_ADC_Convert_Values	4	static
+../Core/Src/FEB_ADC.c:70:6:FEB_ADC_Select_Current	24	static
+../Core/Src/FEB_ADC.c:83:6:FEB_ADC_Select_Voltage	24	static
+../Core/Src/FEB_ADC.c:96:6:FEB_ADC_Select_Temp1	24	static
+../Core/Src/FEB_ADC.c:109:6:FEB_ADC_Select_Temp2	24	static
+../Core/Src/FEB_ADC.c:122:6:FEB_ADC_Select_Temp3	24	static
