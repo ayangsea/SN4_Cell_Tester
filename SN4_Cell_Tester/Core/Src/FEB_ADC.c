@@ -7,8 +7,8 @@ extern ADC_HandleTypeDef hadc1;
 // ******************************** Struct ********************************
 
 typedef struct {
-	float voltage;
-	uint16_t current; //TODO: Figure out what units
+	float voltage_V;
+	float current_A; //TODO: Figure out what units
 	float temp1_C;
 	float temp2_C;
 	float temp3_C;
@@ -64,7 +64,27 @@ void FEB_ADC_PollADC() {
 
 void FEB_ADC_Convert_Values() {
 	//TODO: Convert values
-	battery.voltage = adc_val[1] * 3.3f / 4096.0f;
+	battery.voltage_V = adc_val[1] * 3.3f / 4096.0f;
+}
+
+float FEB_ADC_Get_Voltage() {
+	return battery.voltage_V;
+}
+
+float FEB_ADC_Get_Current() {
+	return battery.current_A;
+}
+
+float FEB_ADC_Get_Temp1() {
+	return battery.temp1_C;
+}
+
+float FEB_ADC_Get_Temp2() {
+	return battery.temp2_C;
+}
+
+float FEB_ADC_Get_Temp3() {
+	return battery.temp3_C;
 }
 
 void FEB_ADC_Select_Current() {

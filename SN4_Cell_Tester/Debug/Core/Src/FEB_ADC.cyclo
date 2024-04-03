@@ -1,7 +1,12 @@
 ../Core/Src/FEB_ADC.c:23:6:FEB_ADC_PollADC	1
 ../Core/Src/FEB_ADC.c:65:6:FEB_ADC_Convert_Values	1
-../Core/Src/FEB_ADC.c:70:6:FEB_ADC_Select_Current	2
-../Core/Src/FEB_ADC.c:83:6:FEB_ADC_Select_Voltage	2
-../Core/Src/FEB_ADC.c:96:6:FEB_ADC_Select_Temp1	2
-../Core/Src/FEB_ADC.c:109:6:FEB_ADC_Select_Temp2	2
-../Core/Src/FEB_ADC.c:122:6:FEB_ADC_Select_Temp3	2
+../Core/Src/FEB_ADC.c:70:7:FEB_ADC_Get_Voltage	1
+../Core/Src/FEB_ADC.c:74:7:FEB_ADC_Get_Current	1
+../Core/Src/FEB_ADC.c:78:7:FEB_ADC_Get_Temp1	1
+../Core/Src/FEB_ADC.c:82:7:FEB_ADC_Get_Temp2	1
+../Core/Src/FEB_ADC.c:86:7:FEB_ADC_Get_Temp3	1
+../Core/Src/FEB_ADC.c:90:6:FEB_ADC_Select_Current	2
+../Core/Src/FEB_ADC.c:103:6:FEB_ADC_Select_Voltage	2
+../Core/Src/FEB_ADC.c:116:6:FEB_ADC_Select_Temp1	2
+../Core/Src/FEB_ADC.c:129:6:FEB_ADC_Select_Temp2	2
+../Core/Src/FEB_ADC.c:142:6:FEB_ADC_Select_Temp3	2

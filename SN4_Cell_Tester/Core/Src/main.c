@@ -74,9 +74,7 @@ static void MX_TIM13_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  uint16_t timer_val;
-  char uart_buf[50];
-  int uart_buf_len;
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -115,6 +113,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
+	  FEB_Main_Loop();
   }
   /* USER CODE END 3 */
 }
@@ -264,9 +263,9 @@ static void MX_TIM13_Init(void)
 
   /* USER CODE END TIM13_Init 1 */
   htim13.Instance = TIM13;
-  htim13.Init.Prescaler = 15999;
+  htim13.Init.Prescaler = 15;
   htim13.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim13.Init.Period = 1000;
+  htim13.Init.Period = 10000;
   htim13.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim13.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim13) != HAL_OK)

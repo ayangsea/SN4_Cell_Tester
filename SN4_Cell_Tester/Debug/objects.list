@@ -1,4 +1,6 @@
 "./Core/Src/FEB_ADC.o"
+"./Core/Src/FEB_Charge.o"
+"./Core/Src/FEB_Discharge.o"
 "./Core/Src/FEB_Main.o"
 "./Core/Src/FEB_Relay.o"
 "./Core/Src/FEB_TIM.o"

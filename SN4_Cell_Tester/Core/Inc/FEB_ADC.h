@@ -11,6 +11,11 @@
 
 void FEB_ADC_PollADC(void);
 void FEB_ADC_Convert_Values(void);
+float FEB_ADC_Get_Voltage(void);
+float FEB_ADC_Get_Current(void);
+float FEB_ADC_Get_Temp1(void);
+float FEB_ADC_Get_Temp2(void);
+float FEB_ADC_Get_Temp3(void);
 void FEB_ADC_Select_Current(void);
 void FEB_ADC_Select_Voltage(void);
 void FEB_ADC_Select_Temp1(void);
