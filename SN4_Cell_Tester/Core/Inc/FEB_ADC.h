@@ -6,6 +6,8 @@
 #include "stm32f4xx_hal.h"
 #include <stdint.h>
 #include "main.h"
+#include "FEB_Constant.h"
+#include "FEB_SM.h"
 
 // ********************************** Functions **********************************
 
@@ -16,6 +18,7 @@ float FEB_ADC_Get_Current(void);
 float FEB_ADC_Get_Temp1(void);
 float FEB_ADC_Get_Temp2(void);
 float FEB_ADC_Get_Temp3(void);
+void FEB_ADC_Status(void);
 void FEB_ADC_Select_Current(void);
 void FEB_ADC_Select_Voltage(void);
 void FEB_ADC_Select_Temp1(void);

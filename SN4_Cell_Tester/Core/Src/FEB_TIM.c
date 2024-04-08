@@ -14,9 +14,9 @@ void FEB_TIM_Start_Timer() {
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim == &htim13) {
-		//FEB_ADC_PollADC();
-		char errmsg[256];
-		sprintf(errmsg, "Interrupt\n");
-		HAL_UART_Transmit(&huart2, (uint8_t*) errmsg, strlen(errmsg), 100);
+		FEB_ADC_PollADC();
+//		char errmsg[256];
+//		sprintf(errmsg, "Interrupt\n");
+//		HAL_UART_Transmit(&huart2, (uint8_t*) errmsg, strlen(errmsg), 100);
 	}
 }

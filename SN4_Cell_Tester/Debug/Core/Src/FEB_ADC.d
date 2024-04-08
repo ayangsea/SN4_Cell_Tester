@@ -30,7 +30,8 @@ Core/Src/FEB_ADC.o: ../Core/Src/FEB_ADC.c ../Core/Inc/FEB_ADC.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/main.h
+ ../Core/Inc/main.h ../Core/Inc/FEB_Constant.h ../Core/Inc/FEB_SM.h \
+ ../Core/Inc/FEB_Relay.h
 ../Core/Inc/FEB_ADC.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -64,3 +65,6 @@ Core/Src/FEB_ADC.o: ../Core/Src/FEB_ADC.c ../Core/Inc/FEB_ADC.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Core/Inc/main.h:
+../Core/Inc/FEB_Constant.h:
+../Core/Inc/FEB_SM.h:
+../Core/Inc/FEB_Relay.h:

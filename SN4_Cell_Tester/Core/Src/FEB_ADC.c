@@ -22,7 +22,8 @@ static uint16_t adc_val[5];
 
 void FEB_ADC_PollADC() {
 
-	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	//TODO: Remove, for testing w/ LED
+	//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 
 	//Current
 	FEB_ADC_Select_Current();
@@ -60,6 +61,8 @@ void FEB_ADC_PollADC() {
 	HAL_ADC_Stop(&hadc1);
 
 	FEB_ADC_Convert_Values();
+
+	FEB_ADC_Status();
 }
 
 void FEB_ADC_Convert_Values() {
@@ -85,6 +88,19 @@ float FEB_ADC_Get_Temp2() {
 
 float FEB_ADC_Get_Temp3() {
 	return battery.temp3_C;
+}
+
+void FEB_ADC_Status() {
+	FEB_SM_ST_t state = FEB_SM_Get_Current_State();
+	if ((FEB_ADC_Get_Voltage() > FEB_CONST_CELL_MAX_VOLT_V) ||
+			(FEB_ADC_Get_Voltage() < FEB_CONST_CELL_MIN_VOLT_V) ||
+			(state == FEB_SM_ST_DISCHARGE && FEB_ADC_Get_Current() > FEB_CONST_MAX_CURRENT_DC_A) ||
+			(state == FEB_SM_ST_CHARGE && FEB_ADC_Get_Current() > FEB_CONST_MAX_CURRENT_CH_A) ||
+			(FEB_ADC_Get_Temp1() > FEB_CONST_CELL_MAX_TEMP_DC_C) ||
+			(FEB_ADC_Get_Temp2() > FEB_CONST_CELL_MAX_TEMP_DC_C) ||
+			(FEB_ADC_Get_Temp3() > FEB_CONST_CELL_MAX_TEMP_DC_C)) {
+		FEB_SM_Set_Current_State(FEB_SM_ST_IDLE);
+	}
 }
 
 void FEB_ADC_Select_Current() {

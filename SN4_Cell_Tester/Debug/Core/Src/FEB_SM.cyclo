@@ -1,0 +1,8 @@
+../Core/Src/FEB_SM.c:30:6:FEB_SM_Init	1
+../Core/Src/FEB_SM.c:37:13:FEB_SM_Get_Current_State	1
+../Core/Src/FEB_SM.c:42:9:FEB_SM_Set_Current_State	4
+../Core/Src/FEB_SM.c:55:13:idle_to_charge	1
+../Core/Src/FEB_SM.c:60:13:idle_to_discharge	1
+../Core/Src/FEB_SM.c:65:13:charge_to_discharge	1
+../Core/Src/FEB_SM.c:70:13:discharge_to_charge	1
+../Core/Src/FEB_SM.c:75:13:shutdown	1
